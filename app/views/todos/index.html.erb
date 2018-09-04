@@ -1,13 +1,17 @@
-<div class="card card-block bg-faded">
-	<%= @todos.each do |todo| %>
-		<%= todo.description %>
-		<%= link_to 'Mostrar', todo %>
-		<%= link_to 'Editar' %>
-		<%= link_to "Borrar", todo, method: :delete %> 
-	<% end %>
+<div class="container">
+	<div class="card card-block bg-faded">
+		<%= @todos.each do |todo| %>
+			<%= todo.description %>
+			<%= link_to 'Marcar como completado' %> <!-- Falta esto -->
+			<%= link_to 'Mostrar', todo %>
+			<%= link_to 'Editar' %> <!-- Falta esto -->
+			<%= link_to "Borrar", todo, method: :delete %> 
+		<% end %>
+	</div>
+	<%= link_to 'Crear Todo', todos_new_path %>
 </div>
 
-<%= link_to 'Crear Todo', todos_new_path %>
+
 
 
 
