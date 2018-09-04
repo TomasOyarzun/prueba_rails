@@ -2,9 +2,9 @@
 	<div class="card card-block bg-faded">
 		<%= @todos.each do |todo| %>
 			<%= todo.description %>
-			<%= link_to 'Marcar como completado' %> <!-- Falta esto -->
+			<%= link_to 'Marcar como completado', todo_complete_path(todo) %> 
 			<%= link_to 'Mostrar', todo %>
-			<%= link_to 'Editar' %> <!-- Falta esto -->
+			<%= link_to 'Editar', todo_edit_path(todo) %>
 			<%= link_to "Borrar", todo, method: :delete %> 
 		<% end %>
 	</div>
