@@ -1,7 +1,11 @@
 <div class="card card-block bg-faded">
 	<%= @todos.each do |todo| %>
 		<%= todo %>
+		<%= link_to 'Mostrar', todo_path %>
 	<% end %>
 </div>
 
 <%= link_to 'Crear Todo' %>
+
+
+
