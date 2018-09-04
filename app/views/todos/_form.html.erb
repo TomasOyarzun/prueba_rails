@@ -1,0 +1,6 @@
+<%= form_with model: @todo, local:true do |f| %>
+	<h1> <%= f.label :description, "Descripción" %> </h1>
+	<p> <%= f.text_area :description %> </p>
+	
+	<%= f.submit "Enviar" %>
+<% end %>
